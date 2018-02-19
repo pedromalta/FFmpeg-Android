@@ -119,7 +119,7 @@ public class FFmpeg implements FFbinaryInterface {
             String[] ffmpegBinary = new String[]{FileUtils.getFFmpegCommand(context.provide(), environvenmentVars)};
             String[] command = concatenate(ffmpegBinary, cmd);
             ffmpegExecuteAsyncTask = new FFcommandExecuteAsyncTask(command, timeout, ffmpegExecuteResponseHandler);
-            ffmpegExecuteAsyncTask.execute();
+            ffmpegExecuteAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
             return ffmpegExecuteAsyncTask;
         } else {
             throw new IllegalArgumentException("shell command cannot be empty");
