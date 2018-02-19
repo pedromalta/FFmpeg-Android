@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.util.Map;
+import android.os.AsyncTask;
 
 import nl.bravobit.ffmpeg.exceptions.FFmpegCommandAlreadyRunningException;
 
