@@ -157,6 +157,12 @@ public class FFmpeg implements FFbinaryInterface {
     }
 
     @Override
+    public void sendQuitSignal() {
+        ffmpegExecuteAsyncTask.sendQuitSignal();
+    }
+
+
+    @Override
     public void setTimeout(long timeout) {
         if (timeout >= MINIMUM_TIMEOUT) {
             this.timeout = timeout;

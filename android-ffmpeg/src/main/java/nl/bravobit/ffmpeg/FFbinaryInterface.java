@@ -50,6 +50,11 @@ interface FFbinaryInterface {
     boolean killRunningProcesses();
 
     /**
+     * Send quit signal for running process
+     */
+    void sendQuitSignal();
+
+    /**
      * Timeout for binary process, should be minimum of 10 seconds
      *
      * @param timeout in milliseconds
