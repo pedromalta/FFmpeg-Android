@@ -163,6 +163,12 @@ public class FFprobe implements FFbinaryInterface {
     }
 
     @Override
+    public void sendQuitSignal() {
+        ffprobeExecuteAsyncTask.sendQuitSignal();
+    }
+
+
+    @Override
     public FFbinaryObserver whenFFbinaryIsReady(Runnable onReady, int timeout) {
         return Util.observeOnce(new Util.ObservePredicate() {
             @Override
